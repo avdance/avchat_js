@@ -1,0 +1,18 @@
+.logo {
+    width: 120px;
+    height: 31px;
+    background: rgba(16, 16, 16, 0.2);
+    margin: 16px 28px 16px 0;
+    float: left;
+}
+
+::-webkit-scrollbar {
+    height: 2px;
+    width: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
+    background: #c6c6c6;
+}
