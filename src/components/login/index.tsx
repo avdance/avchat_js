@@ -36,9 +36,9 @@ export default class LoginComponent extends Component {
             </Button>,
           ]}
         >
-            <div style={{backgroundColor: 'yellow'}}>
+            <div style={{margin: '0 auto', width: '210px'}}>
                 <p>手机号：<input type="input" id="mobile" /></p>
-                <p>手机号：<input type="input" id="mobile" /></p>
+                <p>验证码：<input type="input" id="mobile" /></p>
             </div>
         </Modal>
       </div>
