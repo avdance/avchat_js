@@ -1,7 +1,18 @@
 import React, { Component } from 'react';
+import { RouteComponentProps } from "react-router-dom";
 import { Modal, Button } from 'antd';
 
-export default class LoginComponent extends Component {
+interface IProps {}
+type HomeProps = IProps & RouteComponentProps;
+
+interface IState {}
+
+export default class LoginComponent extends React.Component<HomeProps, IState> {
+  //mixins = [ History ];
+  constructor(props: HomeProps) {
+    super(props);
+  }
+
   state = {
     loading: false,
     visible: true,
@@ -11,11 +22,13 @@ export default class LoginComponent extends Component {
     this.setState({ loading: true });
     setTimeout(() => {
       this.setState({ loading: false, visible: false });
+      this.props.history.push('/home');
     }, 3000);
   };
 
   handleCancel = () => {
     this.setState({ visible: false });
+    this.props.history.push('/home');
   };
 
   render() {
