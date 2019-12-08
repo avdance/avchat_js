@@ -16,3 +16,50 @@
     border-radius: 2px;
     background: #c6c6c6;
 }
+
+.avc-msg-item {
+    padding: 10px 20px
+}
+
+.avc-msg-item .inner {
+    position: relative
+}
+
+.avc-msg-item .inner .manImg {
+    position: absolute;
+    top: 0;
+    width: 40px;
+    height: 40px
+}
+
+.avc-msg-item .inner .contentBox {
+    position: relative;
+    display: inline-block;
+    padding: 10px 15px;
+    line-height: 23px;
+    font-size: 15px;
+    word-wrap: break-word;
+    word-break: break-all
+}
+
+.own-msg .inner {
+    padding-left: 52px;
+    padding-right: 33px
+}
+
+.own-msg .inner .manImg {
+    left: 0
+}
+
+.buddy-msg {
+    float: right
+}
+
+.buddy-msg .inner {
+    padding-left: 33px;
+    padding-right: 52px
+}
+
+.buddy-msg .inner .manImg {
+    right: 0
+}
