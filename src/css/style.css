@@ -18,7 +18,8 @@
 }
 
 .avc-msg-item {
-    padding: 10px 20px
+    padding: 10px 20px;
+    clear: both;
 }
 
 .avc-msg-item .inner {
