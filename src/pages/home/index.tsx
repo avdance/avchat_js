@@ -37,6 +37,16 @@ export default class HomeComponent extends Component {
         },
         {
             title: '马六',
+        }],
+        myFriends: [{
+            title: 'zhangsan',
+        }, {
+            title: 'lisi',
+        }, {
+            title: '王五',
+        },
+        {
+            title: '马六',
         }]
       };
 
@@ -64,17 +74,7 @@ export default class HomeComponent extends Component {
                                         <UserRoomListComponent itemSource={this.state.recentAccess} />
                                     </TabPane>
                                     <TabPane tab="好友" key="2">
-                                        {/*<Collapse defaultActiveKey="1" bordered={false}>
-                                            <Panel header="开发部" key="1">
-                                                <UserRoomListComponent />
-                                            </Panel>
-                                            <Panel header="销售部" key="2">
-                                                <UserRoomListComponent />
-                                            </Panel>
-                                            <Panel header="运维部" key="3">
-                                                <UserRoomListComponent />
-                                            </Panel>
-                                        </Collapse>*/}
+                                        <UserRoomListComponent itemSource={this.state.myFriends} />
                                     </TabPane>
                                 </Tabs>
                             </div>

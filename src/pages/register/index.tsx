@@ -3,13 +3,13 @@ import { RouteComponentProps } from "react-router-dom";
 import { Modal, Button } from 'antd';
 
 interface IProps {}
-type LoginProps = IProps & RouteComponentProps;
+type RegisterProps = IProps & RouteComponentProps;
 
 interface IState {}
 
-export default class LoginComponent extends React.Component<LoginProps, IState> {
+export default class LoginComponent extends React.Component<RegisterProps, IState> {
   //mixins = [ History ];
-  constructor(props: LoginProps) {
+  constructor(props: RegisterProps) {
     super(props);
   }
 
@@ -26,10 +26,6 @@ export default class LoginComponent extends React.Component<LoginProps, IState> 
     }, 3000);
   };
 
-  handleRegister = () => {
-    this.props.history.push('/register');
-  };
-
   handleCancel = () => {
     this.setState({ visible: false });
     this.props.history.push('/home');
@@ -41,15 +37,12 @@ export default class LoginComponent extends React.Component<LoginProps, IState> 
       <div>
         <Modal
           visible={visible}
-          title="登录"
+          title="注册"
           onOk={this.handleOk}
           onCancel={this.handleCancel}
           footer={[
             <Button key="back" onClick={this.handleCancel}>
               取消
-            </Button>,
-            <Button key="back" onClick={this.handleRegister}>
-              注册
             </Button>,
             <Button key="submit" type="primary" loading={loading} onClick={this.handleOk}>
               提交
